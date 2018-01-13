@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16AB34E9AA5071DAFE3855EA /* Pods_SunshireDriverContract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093C8AD3BD746671B54214E /* Pods_SunshireDriverContract.framework */; };
+		C300FCE91EC3C49700918A45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FCE81EC3C49700918A45 /* main.m */; };
+		C300FCEC1EC3C49700918A45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FCEB1EC3C49700918A45 /* AppDelegate.m */; };
+		C300FCF21EC3C49700918A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C300FCF01EC3C49700918A45 /* Main.storyboard */; };
+		C300FCF51EC3C49700918A45 /* SunshireDriverContract.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C300FCF31EC3C49700918A45 /* SunshireDriverContract.xcdatamodeld */; };
+		C300FCF71EC3C49700918A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C300FCF61EC3C49700918A45 /* Assets.xcassets */; };
+		C300FCFA1EC3C49700918A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C300FCF81EC3C49700918A45 /* LaunchScreen.storyboard */; };
+		C300FD031EC4DE8D00918A45 /* Logon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C300FD021EC4DE8D00918A45 /* Logon.storyboard */; };
+		C300FD061EC4DEA300918A45 /* LogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FD051EC4DEA300918A45 /* LogonViewController.m */; };
+		C300FD0A1EC62C6800918A45 /* LinkPara.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FD091EC62C6800918A45 /* LinkPara.m */; };
+		C300FD0D1EC62CC000918A45 /* SunshireContractConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FD0C1EC62CC000918A45 /* SunshireContractConnector.m */; };
+		C300FD131EC62E8900918A45 /* CurrentUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FD121EC62E8900918A45 /* CurrentUserManager.m */; };
+		C300FD191EC799EE00918A45 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C300FD181EC799EE00918A45 /* UserNotifications.framework */; };
+		C31DE79A1F23C81B000BE149 /* TripTextDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DE7951F23C81B000BE149 /* TripTextDetailViewController.m */; };
+		C31DE79B1F23C81B000BE149 /* TripTextRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DE7971F23C81B000BE149 /* TripTextRootViewController.m */; };
+		C31DE79C1F23C81B000BE149 /* TripTextSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DE7991F23C81B000BE149 /* TripTextSectionViewController.m */; };
+		C31DE79E1F23C827000BE149 /* TripTextRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31DE79D1F23C827000BE149 /* TripTextRoot.storyboard */; };
+		C31DE7A11F23C874000BE149 /* UIViewController+CYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DE7A01F23C874000BE149 /* UIViewController+CYViewController.m */; };
+		C31DE7A41F23CB8F000BE149 /* TripTextPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31DE7A31F23CB8F000BE149 /* TripTextPreviewViewController.m */; };
+		C32C48D21EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C48CC1EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.m */; };
+		C32C48D31EF5C37700B90717 /* SunshireMessengerDispatchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C48CF1EF5C37700B90717 /* SunshireMessengerDispatchCell.m */; };
+		C32C48D81EF5C3EF00B90717 /* Messenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32C48D51EF5C3EF00B90717 /* Messenger.storyboard */; };
+		C32C48D91EF5C3EF00B90717 /* SunshireMessengerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C48D71EF5C3EF00B90717 /* SunshireMessengerViewController.m */; };
+		C32C48DE1EF5C6C900B90717 /* TextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32C48DC1EF5C6C900B90717 /* TextEditorViewController.m */; };
+		C32C48DF1EF5C6C900B90717 /* TextEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C48DD1EF5C6C900B90717 /* TextEditorViewController.xib */; };
+		C33145A71ED4B4520005EDA0 /* CYFunctionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C33145A61ED4B4520005EDA0 /* CYFunctionSet.m */; };
+		C34C97541ECE163C001E974A /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C97531ECE163C001E974A /* MainTabBarController.m */; };
+		C34C975A1ECE19DF001E974A /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C97591ECE19DF001E974A /* History.storyboard */; };
+		C34C975C1ECE19EB001E974A /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C975B1ECE19EB001E974A /* Location.storyboard */; };
+		C34C97601ECE1A01001E974A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C975F1ECE1A01001E974A /* Profile.storyboard */; };
+		C34C97621ECE1D39001E974A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34C97611ECE1D39001E974A /* MapKit.framework */; };
+		C34C97651ECE75BF001E974A /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C97641ECE75BF001E974A /* LocationViewController.m */; };
+		C36A97381EE6175100DAE52C /* NoloadDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36A97371EE6175100DAE52C /* NoloadDetail.storyboard */; };
+		C36A973B1EE618FD00DAE52C /* NoloadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36A973A1EE618FD00DAE52C /* NoloadDetailViewController.m */; };
+		C37A0C451EE6125800FFCD2C /* NoLoadRootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C37A0C441EE6125800FFCD2C /* NoLoadRootTableViewCell.m */; };
+		C38D2B9D1ED50DBF00E3525C /* CalendarHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2B9C1ED50DBF00E3525C /* CalendarHistoryViewController.m */; };
+		C38D2BC41EDA121F00E3525C /* DataPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BBA1EDA121F00E3525C /* DataPickerViewController.m */; };
+		C38D2BC51EDA121F00E3525C /* DataPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38D2BBB1EDA121F00E3525C /* DataPickerViewController.xib */; };
+		C38D2BC61EDA121F00E3525C /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BBE1EDA121F00E3525C /* DatePickerViewController.m */; };
+		C38D2BC71EDA121F00E3525C /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38D2BBF1EDA121F00E3525C /* DatePickerViewController.xib */; };
+		C38D2BC81EDA121F00E3525C /* DateTimeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BC21EDA121F00E3525C /* DateTimeSelectorViewController.m */; };
+		C38D2BC91EDA121F00E3525C /* DateTimeSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38D2BC31EDA121F00E3525C /* DateTimeSelectorViewController.xib */; };
+		C38D2BCD1EDA54DD00E3525C /* TripDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D2BCC1EDA54DD00E3525C /* TripDetail.storyboard */; };
+		C38D2BD01EDA555700E3525C /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BCF1EDA555700E3525C /* TripDetailViewController.m */; };
+		C38D2BD41EDA55FC00E3525C /* CYPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BD31EDA55FC00E3525C /* CYPolyline.m */; };
+		C38D2BDC1EDDFBE700E3525C /* ProductRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D2BDB1EDDFBE700E3525C /* ProductRoot.storyboard */; };
+		C38D2BDE1EDDFBF900E3525C /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D2BDD1EDDFBF900E3525C /* ProductDetail.storyboard */; };
+		C38D2BE21EDDFD3E00E3525C /* ProductRootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BE11EDDFD3E00E3525C /* ProductRootTableViewCell.m */; };
+		C38D2BE51EDE382100E3525C /* ProductRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BE41EDE382100E3525C /* ProductRootViewController.m */; };
+		C38D2BE91EDF684300E3525C /* ProductTokenHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BE81EDF684300E3525C /* ProductTokenHandler.m */; };
+		C38D2BED1EDF719E00E3525C /* CYContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BEC1EDF719E00E3525C /* CYContentTableViewCell.m */; };
+		C38D2BF01EDF723400E3525C /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BEF1EDF723400E3525C /* ProductDetailViewController.m */; };
+		C38D2BF31EDF728800E3525C /* ProductDetailActionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D2BF21EDF728800E3525C /* ProductDetailActionCollectionViewCell.m */; };
+		C39DB7231ED4FA7900BF4230 /* CYColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C39DB7221ED4FA7900BF4230 /* CYColorSet.m */; };
+		C3DD8B641ED4B60600F7C2F6 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8B631ED4B60600F7C2F6 /* HistoryViewController.m */; };
+		C3DD8B671ED4B67E00F7C2F6 /* EarningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8B661ED4B67E00F7C2F6 /* EarningViewController.m */; };
+		C3DD8B6D1ED4BBE300F7C2F6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8B6C1ED4BBE300F7C2F6 /* ProfileViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0093C8AD3BD746671B54214E /* Pods_SunshireDriverContract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunshireDriverContract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE97CEFA2DAEC9C74A132B16 /* Pods-SunshireDriverContract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunshireDriverContract.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunshireDriverContract/Pods-SunshireDriverContract.release.xcconfig"; sourceTree = "<group>"; };
+		C300FCE41EC3C49700918A45 /* SunshireDriverContract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunshireDriverContract.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C300FCE81EC3C49700918A45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C300FCEA1EC3C49700918A45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C300FCEB1EC3C49700918A45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C300FCF11EC3C49700918A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C300FCF41EC3C49700918A45 /* SunshireDriverContract.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SunshireDriverContract.xcdatamodel; sourceTree = "<group>"; };
+		C300FCF61EC3C49700918A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C300FCF91EC3C49700918A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C300FCFB1EC3C49700918A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C300FD021EC4DE8D00918A45 /* Logon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logon.storyboard; sourceTree = "<group>"; };
+		C300FD041EC4DEA300918A45 /* LogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogonViewController.h; path = Logon/LogonViewController.h; sourceTree = "<group>"; };
+		C300FD051EC4DEA300918A45 /* LogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogonViewController.m; path = Logon/LogonViewController.m; sourceTree = "<group>"; };
+		C300FD081EC62C6800918A45 /* LinkPara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkPara.h; path = "Data Socket/LinkPara.h"; sourceTree = "<group>"; };
+		C300FD091EC62C6800918A45 /* LinkPara.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkPara.m; path = "Data Socket/LinkPara.m"; sourceTree = "<group>"; };
+		C300FD0B1EC62CC000918A45 /* SunshireContractConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunshireContractConnector.h; path = "Data Socket/SunshireContractConnector.h"; sourceTree = "<group>"; };
+		C300FD0C1EC62CC000918A45 /* SunshireContractConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunshireContractConnector.m; path = "Data Socket/SunshireContractConnector.m"; sourceTree = "<group>"; };
+		C300FD0E1EC62CD900918A45 /* SunshireContractDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunshireContractDelegate.h; path = "Data Socket/SunshireContractDelegate.h"; sourceTree = "<group>"; };
+		C300FD101EC62E8900918A45 /* CurrentUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentUserDelegate.h; path = "Current User/CurrentUserDelegate.h"; sourceTree = "<group>"; };
+		C300FD111EC62E8900918A45 /* CurrentUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentUserManager.h; path = "Current User/CurrentUserManager.h"; sourceTree = "<group>"; };
+		C300FD121EC62E8900918A45 /* CurrentUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentUserManager.m; path = "Current User/CurrentUserManager.m"; sourceTree = "<group>"; };
+		C300FD161EC68A2600918A45 /* SunshireDriverContract.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunshireDriverContract.entitlements; sourceTree = "<group>"; };
+		C300FD181EC799EE00918A45 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C31DE7941F23C81B000BE149 /* TripTextDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripTextDetailViewController.h; path = TripText/TripTextDetailViewController.h; sourceTree = "<group>"; };
+		C31DE7951F23C81B000BE149 /* TripTextDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripTextDetailViewController.m; path = TripText/TripTextDetailViewController.m; sourceTree = "<group>"; };
+		C31DE7961F23C81B000BE149 /* TripTextRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripTextRootViewController.h; path = TripText/TripTextRootViewController.h; sourceTree = "<group>"; };
+		C31DE7971F23C81B000BE149 /* TripTextRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripTextRootViewController.m; path = TripText/TripTextRootViewController.m; sourceTree = "<group>"; };
+		C31DE7981F23C81B000BE149 /* TripTextSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripTextSectionViewController.h; path = TripText/TripTextSectionViewController.h; sourceTree = "<group>"; };
+		C31DE7991F23C81B000BE149 /* TripTextSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripTextSectionViewController.m; path = TripText/TripTextSectionViewController.m; sourceTree = "<group>"; };
+		C31DE79D1F23C827000BE149 /* TripTextRoot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TripTextRoot.storyboard; sourceTree = "<group>"; };
+		C31DE79F1F23C874000BE149 /* UIViewController+CYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CYViewController.h"; path = "Functions/UIViewController+CYViewController.h"; sourceTree = "<group>"; };
+		C31DE7A01F23C874000BE149 /* UIViewController+CYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CYViewController.m"; path = "Functions/UIViewController+CYViewController.m"; sourceTree = "<group>"; };
+		C31DE7A21F23CB8F000BE149 /* TripTextPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripTextPreviewViewController.h; path = TripText/TripTextPreviewViewController.h; sourceTree = "<group>"; };
+		C31DE7A31F23CB8F000BE149 /* TripTextPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripTextPreviewViewController.m; path = TripText/TripTextPreviewViewController.m; sourceTree = "<group>"; };
+		C31DE7A51F23CBBB000BE149 /* TripTextPreviewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripTextPreviewDelegate.h; path = TripText/TripTextPreviewDelegate.h; sourceTree = "<group>"; };
+		C31DE7A61F23CEF9000BE149 /* TripTextSectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripTextSectionDelegate.h; path = TripText/TripTextSectionDelegate.h; sourceTree = "<group>"; };
+		C32C48CB1EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunshireMessengerCustomerCellTableViewCell.h; path = Messenger/SunshireMessengerCustomerCellTableViewCell.h; sourceTree = "<group>"; };
+		C32C48CC1EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunshireMessengerCustomerCellTableViewCell.m; path = Messenger/SunshireMessengerCustomerCellTableViewCell.m; sourceTree = "<group>"; };
+		C32C48CE1EF5C37700B90717 /* SunshireMessengerDispatchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunshireMessengerDispatchCell.h; path = Messenger/SunshireMessengerDispatchCell.h; sourceTree = "<group>"; };
+		C32C48CF1EF5C37700B90717 /* SunshireMessengerDispatchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunshireMessengerDispatchCell.m; path = Messenger/SunshireMessengerDispatchCell.m; sourceTree = "<group>"; };
+		C32C48D51EF5C3EF00B90717 /* Messenger.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Messenger.storyboard; path = Messenger/Messenger.storyboard; sourceTree = "<group>"; };
+		C32C48D61EF5C3EF00B90717 /* SunshireMessengerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunshireMessengerViewController.h; path = Messenger/SunshireMessengerViewController.h; sourceTree = "<group>"; };
+		C32C48D71EF5C3EF00B90717 /* SunshireMessengerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunshireMessengerViewController.m; path = Messenger/SunshireMessengerViewController.m; sourceTree = "<group>"; };
+		C32C48DA1EF5C6C900B90717 /* TextEditorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextEditorDelegate.h; path = DataPicker/TextEditorDelegate.h; sourceTree = "<group>"; };
+		C32C48DB1EF5C6C900B90717 /* TextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextEditorViewController.h; path = DataPicker/TextEditorViewController.h; sourceTree = "<group>"; };
+		C32C48DC1EF5C6C900B90717 /* TextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextEditorViewController.m; path = DataPicker/TextEditorViewController.m; sourceTree = "<group>"; };
+		C32C48DD1EF5C6C900B90717 /* TextEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextEditorViewController.xib; path = DataPicker/TextEditorViewController.xib; sourceTree = "<group>"; };
+		C33145A51ED4B4520005EDA0 /* CYFunctionSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYFunctionSet.h; path = Functions/CYFunctionSet.h; sourceTree = "<group>"; };
+		C33145A61ED4B4520005EDA0 /* CYFunctionSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYFunctionSet.m; path = Functions/CYFunctionSet.m; sourceTree = "<group>"; };
+		C34C97521ECE163C001E974A /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = Main/MainTabBarController.h; sourceTree = "<group>"; };
+		C34C97531ECE163C001E974A /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarController.m; path = Main/MainTabBarController.m; sourceTree = "<group>"; };
+		C34C97591ECE19DF001E974A /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		C34C975B1ECE19EB001E974A /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		C34C975F1ECE1A01001E974A /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C34C97611ECE1D39001E974A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C34C97631ECE75BF001E974A /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = Location/LocationViewController.h; sourceTree = "<group>"; };
+		C34C97641ECE75BF001E974A /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = Location/LocationViewController.m; sourceTree = "<group>"; };
+		C36A97371EE6175100DAE52C /* NoloadDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NoloadDetail.storyboard; sourceTree = "<group>"; };
+		C36A97391EE618FD00DAE52C /* NoloadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoloadDetailViewController.h; path = Product/NoloadDetailViewController.h; sourceTree = "<group>"; };
+		C36A973A1EE618FD00DAE52C /* NoloadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoloadDetailViewController.m; path = Product/NoloadDetailViewController.m; sourceTree = "<group>"; };
+		C37A0C431EE6125800FFCD2C /* NoLoadRootTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoLoadRootTableViewCell.h; path = Product/NoLoadRootTableViewCell.h; sourceTree = "<group>"; };
+		C37A0C441EE6125800FFCD2C /* NoLoadRootTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoLoadRootTableViewCell.m; path = Product/NoLoadRootTableViewCell.m; sourceTree = "<group>"; };
+		C38D2B9B1ED50DBF00E3525C /* CalendarHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarHistoryViewController.h; path = History/CalendarHistoryViewController.h; sourceTree = "<group>"; };
+		C38D2B9C1ED50DBF00E3525C /* CalendarHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarHistoryViewController.m; path = History/CalendarHistoryViewController.m; sourceTree = "<group>"; };
+		C38D2BB81EDA121F00E3525C /* DataPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPickerDelegate.h; path = DataPicker/DataPickerDelegate.h; sourceTree = "<group>"; };
+		C38D2BB91EDA121F00E3525C /* DataPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataPickerViewController.h; path = DataPicker/DataPickerViewController.h; sourceTree = "<group>"; };
+		C38D2BBA1EDA121F00E3525C /* DataPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataPickerViewController.m; path = DataPicker/DataPickerViewController.m; sourceTree = "<group>"; };
+		C38D2BBB1EDA121F00E3525C /* DataPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataPickerViewController.xib; path = DataPicker/DataPickerViewController.xib; sourceTree = "<group>"; };
+		C38D2BBC1EDA121F00E3525C /* DatePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerDelegate.h; path = DataPicker/DatePickerDelegate.h; sourceTree = "<group>"; };
+		C38D2BBD1EDA121F00E3525C /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerViewController.h; path = DataPicker/DatePickerViewController.h; sourceTree = "<group>"; };
+		C38D2BBE1EDA121F00E3525C /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerViewController.m; path = DataPicker/DatePickerViewController.m; sourceTree = "<group>"; };
+		C38D2BBF1EDA121F00E3525C /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatePickerViewController.xib; path = DataPicker/DatePickerViewController.xib; sourceTree = "<group>"; };
+		C38D2BC01EDA121F00E3525C /* DateTimeSelectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateTimeSelectorDelegate.h; path = DataPicker/DateTimeSelectorDelegate.h; sourceTree = "<group>"; };
+		C38D2BC11EDA121F00E3525C /* DateTimeSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateTimeSelectorViewController.h; path = DataPicker/DateTimeSelectorViewController.h; sourceTree = "<group>"; };
+		C38D2BC21EDA121F00E3525C /* DateTimeSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateTimeSelectorViewController.m; path = DataPicker/DateTimeSelectorViewController.m; sourceTree = "<group>"; };
+		C38D2BC31EDA121F00E3525C /* DateTimeSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateTimeSelectorViewController.xib; path = DataPicker/DateTimeSelectorViewController.xib; sourceTree = "<group>"; };
+		C38D2BCC1EDA54DD00E3525C /* TripDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TripDetail.storyboard; sourceTree = "<group>"; };
+		C38D2BCE1EDA555700E3525C /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripDetailViewController.h; path = History/TripDetailViewController.h; sourceTree = "<group>"; };
+		C38D2BCF1EDA555700E3525C /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripDetailViewController.m; path = History/TripDetailViewController.m; sourceTree = "<group>"; };
+		C38D2BD21EDA55FC00E3525C /* CYPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYPolyline.h; path = History/CYPolyline.h; sourceTree = "<group>"; };
+		C38D2BD31EDA55FC00E3525C /* CYPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYPolyline.m; path = History/CYPolyline.m; sourceTree = "<group>"; };
+		C38D2BDB1EDDFBE700E3525C /* ProductRoot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductRoot.storyboard; sourceTree = "<group>"; };
+		C38D2BDD1EDDFBF900E3525C /* ProductDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
+		C38D2BE01EDDFD3E00E3525C /* ProductRootTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductRootTableViewCell.h; path = Product/ProductRootTableViewCell.h; sourceTree = "<group>"; };
+		C38D2BE11EDDFD3E00E3525C /* ProductRootTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductRootTableViewCell.m; path = Product/ProductRootTableViewCell.m; sourceTree = "<group>"; };
+		C38D2BE31EDE382100E3525C /* ProductRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductRootViewController.h; path = Product/ProductRootViewController.h; sourceTree = "<group>"; };
+		C38D2BE41EDE382100E3525C /* ProductRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductRootViewController.m; path = Product/ProductRootViewController.m; sourceTree = "<group>"; };
+		C38D2BE71EDF684300E3525C /* ProductTokenHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductTokenHandler.h; path = Product/ProductTokenHandler.h; sourceTree = "<group>"; };
+		C38D2BE81EDF684300E3525C /* ProductTokenHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductTokenHandler.m; path = Product/ProductTokenHandler.m; sourceTree = "<group>"; };
+		C38D2BEB1EDF719E00E3525C /* CYContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYContentTableViewCell.h; path = Product/CYContentTableViewCell.h; sourceTree = "<group>"; };
+		C38D2BEC1EDF719E00E3525C /* CYContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYContentTableViewCell.m; path = Product/CYContentTableViewCell.m; sourceTree = "<group>"; };
+		C38D2BEE1EDF723400E3525C /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailViewController.h; path = Product/ProductDetailViewController.h; sourceTree = "<group>"; };
+		C38D2BEF1EDF723400E3525C /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailViewController.m; path = Product/ProductDetailViewController.m; sourceTree = "<group>"; };
+		C38D2BF11EDF728800E3525C /* ProductDetailActionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailActionCollectionViewCell.h; path = Product/ProductDetailActionCollectionViewCell.h; sourceTree = "<group>"; };
+		C38D2BF21EDF728800E3525C /* ProductDetailActionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailActionCollectionViewCell.m; path = Product/ProductDetailActionCollectionViewCell.m; sourceTree = "<group>"; };
+		C39DB7211ED4FA7900BF4230 /* CYColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYColorSet.h; path = Functions/CYColorSet.h; sourceTree = "<group>"; };
+		C39DB7221ED4FA7900BF4230 /* CYColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYColorSet.m; path = Functions/CYColorSet.m; sourceTree = "<group>"; };
+		C3DD8B621ED4B60600F7C2F6 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = History/HistoryViewController.h; sourceTree = "<group>"; };
+		C3DD8B631ED4B60600F7C2F6 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = History/HistoryViewController.m; sourceTree = "<group>"; };
+		C3DD8B651ED4B67E00F7C2F6 /* EarningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarningViewController.h; path = History/EarningViewController.h; sourceTree = "<group>"; };
+		C3DD8B661ED4B67E00F7C2F6 /* EarningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarningViewController.m; path = History/EarningViewController.m; sourceTree = "<group>"; };
+		C3DD8B6B1ED4BBE300F7C2F6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Profile/ProfileViewController.h; sourceTree = "<group>"; };
+		C3DD8B6C1ED4BBE300F7C2F6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Profile/ProfileViewController.m; sourceTree = "<group>"; };
+		E02CB01E62E467D17E191343 /* Pods-SunshireDriverContract.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunshireDriverContract.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunshireDriverContract/Pods-SunshireDriverContract.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C300FCE11EC3C49700918A45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C300FD191EC799EE00918A45 /* UserNotifications.framework in Frameworks */,
+				C34C97621ECE1D39001E974A /* MapKit.framework in Frameworks */,
+				16AB34E9AA5071DAFE3855EA /* Pods_SunshireDriverContract.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		215AE267DD9EAEC09DEDD548 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E02CB01E62E467D17E191343 /* Pods-SunshireDriverContract.debug.xcconfig */,
+				BE97CEFA2DAEC9C74A132B16 /* Pods-SunshireDriverContract.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C300FCDB1EC3C49700918A45 = {
+			isa = PBXGroup;
+			children = (
+				C32C48CA1EF5C36500B90717 /* Messenger */,
+				C38D2BE61EDF681A00E3525C /* Product Token */,
+				C38D2BDA1EDDFBC700E3525C /* Product */,
+				C38D2BB71EDA11BD00E3525C /* DataPicker */,
+				C38D2B9E1ED65A3800E3525C /* FSCalendar */,
+				C33145A41ED4B43F0005EDA0 /* Functions */,
+				C34C97581ECE196A001E974A /* History */,
+				C34C97571ECE1962001E974A /* Location */,
+				C34C97561ECE1958001E974A /* TripText */,
+				C34C97551ECE1951001E974A /* Profile */,
+				C300FD141EC63C3200918A45 /* Main */,
+				C300FD0F1EC62E3B00918A45 /* CurrentUser */,
+				C300FD071EC62C5700918A45 /* DataSocket */,
+				C300FD011EC4DE7C00918A45 /* Logon */,
+				C300FCE61EC3C49700918A45 /* SunshireDriverContract */,
+				C300FCE51EC3C49700918A45 /* Products */,
+				C300FD171EC799ED00918A45 /* Frameworks */,
+				215AE267DD9EAEC09DEDD548 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C300FCE51EC3C49700918A45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C300FCE41EC3C49700918A45 /* SunshireDriverContract.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C300FCE61EC3C49700918A45 /* SunshireDriverContract */ = {
+			isa = PBXGroup;
+			children = (
+				C300FD161EC68A2600918A45 /* SunshireDriverContract.entitlements */,
+				C300FCEA1EC3C49700918A45 /* AppDelegate.h */,
+				C300FCEB1EC3C49700918A45 /* AppDelegate.m */,
+				C300FCF61EC3C49700918A45 /* Assets.xcassets */,
+				C300FCF81EC3C49700918A45 /* LaunchScreen.storyboard */,
+				C300FCFB1EC3C49700918A45 /* Info.plist */,
+				C300FCF31EC3C49700918A45 /* SunshireDriverContract.xcdatamodeld */,
+				C300FCE71EC3C49700918A45 /* Supporting Files */,
+			);
+			path = SunshireDriverContract;
+			sourceTree = "<group>";
+		};
+		C300FCE71EC3C49700918A45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C300FCE81EC3C49700918A45 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C300FD011EC4DE7C00918A45 /* Logon */ = {
+			isa = PBXGroup;
+			children = (
+				C300FD021EC4DE8D00918A45 /* Logon.storyboard */,
+				C300FD041EC4DEA300918A45 /* LogonViewController.h */,
+				C300FD051EC4DEA300918A45 /* LogonViewController.m */,
+			);
+			name = Logon;
+			sourceTree = "<group>";
+		};
+		C300FD071EC62C5700918A45 /* DataSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C300FD081EC62C6800918A45 /* LinkPara.h */,
+				C300FD091EC62C6800918A45 /* LinkPara.m */,
+				C300FD0B1EC62CC000918A45 /* SunshireContractConnector.h */,
+				C300FD0C1EC62CC000918A45 /* SunshireContractConnector.m */,
+				C300FD0E1EC62CD900918A45 /* SunshireContractDelegate.h */,
+			);
+			name = DataSocket;
+			sourceTree = "<group>";
+		};
+		C300FD0F1EC62E3B00918A45 /* CurrentUser */ = {
+			isa = PBXGroup;
+			children = (
+				C300FD101EC62E8900918A45 /* CurrentUserDelegate.h */,
+				C300FD111EC62E8900918A45 /* CurrentUserManager.h */,
+				C300FD121EC62E8900918A45 /* CurrentUserManager.m */,
+			);
+			name = CurrentUser;
+			sourceTree = "<group>";
+		};
+		C300FD141EC63C3200918A45 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C34C97521ECE163C001E974A /* MainTabBarController.h */,
+				C34C97531ECE163C001E974A /* MainTabBarController.m */,
+				C300FCF01EC3C49700918A45 /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		C300FD171EC799ED00918A45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C34C97611ECE1D39001E974A /* MapKit.framework */,
+				C300FD181EC799EE00918A45 /* UserNotifications.framework */,
+				0093C8AD3BD746671B54214E /* Pods_SunshireDriverContract.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C32C48CA1EF5C36500B90717 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+				C32C48D51EF5C3EF00B90717 /* Messenger.storyboard */,
+				C32C48D61EF5C3EF00B90717 /* SunshireMessengerViewController.h */,
+				C32C48D71EF5C3EF00B90717 /* SunshireMessengerViewController.m */,
+				C32C48CB1EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.h */,
+				C32C48CC1EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.m */,
+				C32C48CE1EF5C37700B90717 /* SunshireMessengerDispatchCell.h */,
+				C32C48CF1EF5C37700B90717 /* SunshireMessengerDispatchCell.m */,
+			);
+			name = Messenger;
+			sourceTree = "<group>";
+		};
+		C33145A41ED4B43F0005EDA0 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				C31DE79F1F23C874000BE149 /* UIViewController+CYViewController.h */,
+				C31DE7A01F23C874000BE149 /* UIViewController+CYViewController.m */,
+				C33145A51ED4B4520005EDA0 /* CYFunctionSet.h */,
+				C33145A61ED4B4520005EDA0 /* CYFunctionSet.m */,
+				C39DB7211ED4FA7900BF4230 /* CYColorSet.h */,
+				C39DB7221ED4FA7900BF4230 /* CYColorSet.m */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		C34C97551ECE1951001E974A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C34C975F1ECE1A01001E974A /* Profile.storyboard */,
+				C3DD8B6B1ED4BBE300F7C2F6 /* ProfileViewController.h */,
+				C3DD8B6C1ED4BBE300F7C2F6 /* ProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		C34C97561ECE1958001E974A /* TripText */ = {
+			isa = PBXGroup;
+			children = (
+				C31DE79D1F23C827000BE149 /* TripTextRoot.storyboard */,
+				C31DE7941F23C81B000BE149 /* TripTextDetailViewController.h */,
+				C31DE7951F23C81B000BE149 /* TripTextDetailViewController.m */,
+				C31DE7961F23C81B000BE149 /* TripTextRootViewController.h */,
+				C31DE7971F23C81B000BE149 /* TripTextRootViewController.m */,
+				C31DE7A61F23CEF9000BE149 /* TripTextSectionDelegate.h */,
+				C31DE7981F23C81B000BE149 /* TripTextSectionViewController.h */,
+				C31DE7991F23C81B000BE149 /* TripTextSectionViewController.m */,
+				C31DE7A51F23CBBB000BE149 /* TripTextPreviewDelegate.h */,
+				C31DE7A21F23CB8F000BE149 /* TripTextPreviewViewController.h */,
+				C31DE7A31F23CB8F000BE149 /* TripTextPreviewViewController.m */,
+			);
+			name = TripText;
+			sourceTree = "<group>";
+		};
+		C34C97571ECE1962001E974A /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				C34C975B1ECE19EB001E974A /* Location.storyboard */,
+				C34C97631ECE75BF001E974A /* LocationViewController.h */,
+				C34C97641ECE75BF001E974A /* LocationViewController.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		C34C97581ECE196A001E974A /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C38D2BD11EDA558900E3525C /* Elements */,
+				C38D2BCE1EDA555700E3525C /* TripDetailViewController.h */,
+				C38D2BCF1EDA555700E3525C /* TripDetailViewController.m */,
+				C38D2BCC1EDA54DD00E3525C /* TripDetail.storyboard */,
+				C38D2B9B1ED50DBF00E3525C /* CalendarHistoryViewController.h */,
+				C38D2B9C1ED50DBF00E3525C /* CalendarHistoryViewController.m */,
+				C34C97591ECE19DF001E974A /* History.storyboard */,
+				C3DD8B621ED4B60600F7C2F6 /* HistoryViewController.h */,
+				C3DD8B631ED4B60600F7C2F6 /* HistoryViewController.m */,
+				C3DD8B651ED4B67E00F7C2F6 /* EarningViewController.h */,
+				C3DD8B661ED4B67E00F7C2F6 /* EarningViewController.m */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		C38D2B9E1ED65A3800E3525C /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FSCalendar;
+			sourceTree = "<group>";
+		};
+		C38D2BB71EDA11BD00E3525C /* DataPicker */ = {
+			isa = PBXGroup;
+			children = (
+				C32C48DA1EF5C6C900B90717 /* TextEditorDelegate.h */,
+				C32C48DB1EF5C6C900B90717 /* TextEditorViewController.h */,
+				C32C48DC1EF5C6C900B90717 /* TextEditorViewController.m */,
+				C32C48DD1EF5C6C900B90717 /* TextEditorViewController.xib */,
+				C38D2BB81EDA121F00E3525C /* DataPickerDelegate.h */,
+				C38D2BB91EDA121F00E3525C /* DataPickerViewController.h */,
+				C38D2BBA1EDA121F00E3525C /* DataPickerViewController.m */,
+				C38D2BBB1EDA121F00E3525C /* DataPickerViewController.xib */,
+				C38D2BBC1EDA121F00E3525C /* DatePickerDelegate.h */,
+				C38D2BBD1EDA121F00E3525C /* DatePickerViewController.h */,
+				C38D2BBE1EDA121F00E3525C /* DatePickerViewController.m */,
+				C38D2BBF1EDA121F00E3525C /* DatePickerViewController.xib */,
+				C38D2BC01EDA121F00E3525C /* DateTimeSelectorDelegate.h */,
+				C38D2BC11EDA121F00E3525C /* DateTimeSelectorViewController.h */,
+				C38D2BC21EDA121F00E3525C /* DateTimeSelectorViewController.m */,
+				C38D2BC31EDA121F00E3525C /* DateTimeSelectorViewController.xib */,
+			);
+			name = DataPicker;
+			sourceTree = "<group>";
+		};
+		C38D2BD11EDA558900E3525C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				C38D2BD21EDA55FC00E3525C /* CYPolyline.h */,
+				C38D2BD31EDA55FC00E3525C /* CYPolyline.m */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		C38D2BDA1EDDFBC700E3525C /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				C38D2BEA1EDF714B00E3525C /* DetailElements */,
+				C38D2BDF1EDDFD0D00E3525C /* RootElements */,
+				C38D2BDB1EDDFBE700E3525C /* ProductRoot.storyboard */,
+				C38D2BDD1EDDFBF900E3525C /* ProductDetail.storyboard */,
+				C38D2BE31EDE382100E3525C /* ProductRootViewController.h */,
+				C38D2BE41EDE382100E3525C /* ProductRootViewController.m */,
+				C38D2BEE1EDF723400E3525C /* ProductDetailViewController.h */,
+				C38D2BEF1EDF723400E3525C /* ProductDetailViewController.m */,
+				C36A97371EE6175100DAE52C /* NoloadDetail.storyboard */,
+				C36A97391EE618FD00DAE52C /* NoloadDetailViewController.h */,
+				C36A973A1EE618FD00DAE52C /* NoloadDetailViewController.m */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		C38D2BDF1EDDFD0D00E3525C /* RootElements */ = {
+			isa = PBXGroup;
+			children = (
+				C38D2BE01EDDFD3E00E3525C /* ProductRootTableViewCell.h */,
+				C38D2BE11EDDFD3E00E3525C /* ProductRootTableViewCell.m */,
+				C37A0C431EE6125800FFCD2C /* NoLoadRootTableViewCell.h */,
+				C37A0C441EE6125800FFCD2C /* NoLoadRootTableViewCell.m */,
+			);
+			name = RootElements;
+			sourceTree = "<group>";
+		};
+		C38D2BE61EDF681A00E3525C /* Product Token */ = {
+			isa = PBXGroup;
+			children = (
+				C38D2BE71EDF684300E3525C /* ProductTokenHandler.h */,
+				C38D2BE81EDF684300E3525C /* ProductTokenHandler.m */,
+			);
+			name = "Product Token";
+			sourceTree = "<group>";
+		};
+		C38D2BEA1EDF714B00E3525C /* DetailElements */ = {
+			isa = PBXGroup;
+			children = (
+				C38D2BEB1EDF719E00E3525C /* CYContentTableViewCell.h */,
+				C38D2BEC1EDF719E00E3525C /* CYContentTableViewCell.m */,
+				C38D2BF11EDF728800E3525C /* ProductDetailActionCollectionViewCell.h */,
+				C38D2BF21EDF728800E3525C /* ProductDetailActionCollectionViewCell.m */,
+			);
+			name = DetailElements;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C300FCE31EC3C49700918A45 /* SunshireDriverContract */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C300FCFE1EC3C49700918A45 /* Build configuration list for PBXNativeTarget "SunshireDriverContract" */;
+			buildPhases = (
+				282FB1DF5B8352F175460754 /* [CP] Check Pods Manifest.lock */,
+				C300FCE01EC3C49700918A45 /* Sources */,
+				C300FCE11EC3C49700918A45 /* Frameworks */,
+				C300FCE21EC3C49700918A45 /* Resources */,
+				4770128EC637E3FDC06D05D9 /* [CP] Embed Pods Frameworks */,
+				ACC686C3510C295FAB753D62 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SunshireDriverContract;
+			productName = SunshireDriverContract;
+			productReference = C300FCE41EC3C49700918A45 /* SunshireDriverContract.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C300FCDC1EC3C49700918A45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = SunshireShuttle;
+				TargetAttributes = {
+					C300FCE31EC3C49700918A45 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = G4B7VYAHND;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C300FCDF1EC3C49700918A45 /* Build configuration list for PBXProject "SunshireDriverContract" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C300FCDB1EC3C49700918A45;
+			productRefGroup = C300FCE51EC3C49700918A45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C300FCE31EC3C49700918A45 /* SunshireDriverContract */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C300FCE21EC3C49700918A45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C38D2BDC1EDDFBE700E3525C /* ProductRoot.storyboard in Resources */,
+				C36A97381EE6175100DAE52C /* NoloadDetail.storyboard in Resources */,
+				C300FCFA1EC3C49700918A45 /* LaunchScreen.storyboard in Resources */,
+				C32C48D81EF5C3EF00B90717 /* Messenger.storyboard in Resources */,
+				C38D2BC91EDA121F00E3525C /* DateTimeSelectorViewController.xib in Resources */,
+				C34C97601ECE1A01001E974A /* Profile.storyboard in Resources */,
+				C38D2BDE1EDDFBF900E3525C /* ProductDetail.storyboard in Resources */,
+				C31DE79E1F23C827000BE149 /* TripTextRoot.storyboard in Resources */,
+				C300FCF71EC3C49700918A45 /* Assets.xcassets in Resources */,
+				C300FD031EC4DE8D00918A45 /* Logon.storyboard in Resources */,
+				C38D2BCD1EDA54DD00E3525C /* TripDetail.storyboard in Resources */,
+				C34C975C1ECE19EB001E974A /* Location.storyboard in Resources */,
+				C38D2BC71EDA121F00E3525C /* DatePickerViewController.xib in Resources */,
+				C38D2BC51EDA121F00E3525C /* DataPickerViewController.xib in Resources */,
+				C32C48DF1EF5C6C900B90717 /* TextEditorViewController.xib in Resources */,
+				C34C975A1ECE19DF001E974A /* History.storyboard in Resources */,
+				C300FCF21EC3C49700918A45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		282FB1DF5B8352F175460754 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4770128EC637E3FDC06D05D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunshireDriverContract/Pods-SunshireDriverContract-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACC686C3510C295FAB753D62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunshireDriverContract/Pods-SunshireDriverContract-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C300FCE01EC3C49700918A45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33145A71ED4B4520005EDA0 /* CYFunctionSet.m in Sources */,
+				C31DE7A11F23C874000BE149 /* UIViewController+CYViewController.m in Sources */,
+				C300FCEC1EC3C49700918A45 /* AppDelegate.m in Sources */,
+				C31DE79B1F23C81B000BE149 /* TripTextRootViewController.m in Sources */,
+				C39DB7231ED4FA7900BF4230 /* CYColorSet.m in Sources */,
+				C38D2BC61EDA121F00E3525C /* DatePickerViewController.m in Sources */,
+				C38D2BE91EDF684300E3525C /* ProductTokenHandler.m in Sources */,
+				C38D2BC81EDA121F00E3525C /* DateTimeSelectorViewController.m in Sources */,
+				C38D2BE21EDDFD3E00E3525C /* ProductRootTableViewCell.m in Sources */,
+				C38D2B9D1ED50DBF00E3525C /* CalendarHistoryViewController.m in Sources */,
+				C34C97651ECE75BF001E974A /* LocationViewController.m in Sources */,
+				C3DD8B6D1ED4BBE300F7C2F6 /* ProfileViewController.m in Sources */,
+				C36A973B1EE618FD00DAE52C /* NoloadDetailViewController.m in Sources */,
+				C31DE79C1F23C81B000BE149 /* TripTextSectionViewController.m in Sources */,
+				C300FCF51EC3C49700918A45 /* SunshireDriverContract.xcdatamodeld in Sources */,
+				C3DD8B641ED4B60600F7C2F6 /* HistoryViewController.m in Sources */,
+				C31DE79A1F23C81B000BE149 /* TripTextDetailViewController.m in Sources */,
+				C38D2BD01EDA555700E3525C /* TripDetailViewController.m in Sources */,
+				C32C48D31EF5C37700B90717 /* SunshireMessengerDispatchCell.m in Sources */,
+				C38D2BED1EDF719E00E3525C /* CYContentTableViewCell.m in Sources */,
+				C31DE7A41F23CB8F000BE149 /* TripTextPreviewViewController.m in Sources */,
+				C38D2BE51EDE382100E3525C /* ProductRootViewController.m in Sources */,
+				C300FD131EC62E8900918A45 /* CurrentUserManager.m in Sources */,
+				C38D2BF01EDF723400E3525C /* ProductDetailViewController.m in Sources */,
+				C38D2BF31EDF728800E3525C /* ProductDetailActionCollectionViewCell.m in Sources */,
+				C300FD061EC4DEA300918A45 /* LogonViewController.m in Sources */,
+				C32C48DE1EF5C6C900B90717 /* TextEditorViewController.m in Sources */,
+				C300FCE91EC3C49700918A45 /* main.m in Sources */,
+				C300FD0D1EC62CC000918A45 /* SunshireContractConnector.m in Sources */,
+				C38D2BD41EDA55FC00E3525C /* CYPolyline.m in Sources */,
+				C37A0C451EE6125800FFCD2C /* NoLoadRootTableViewCell.m in Sources */,
+				C38D2BC41EDA121F00E3525C /* DataPickerViewController.m in Sources */,
+				C3DD8B671ED4B67E00F7C2F6 /* EarningViewController.m in Sources */,
+				C34C97541ECE163C001E974A /* MainTabBarController.m in Sources */,
+				C300FD0A1EC62C6800918A45 /* LinkPara.m in Sources */,
+				C32C48D21EF5C37700B90717 /* SunshireMessengerCustomerCellTableViewCell.m in Sources */,
+				C32C48D91EF5C3EF00B90717 /* SunshireMessengerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C300FCF01EC3C49700918A45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C300FCF11EC3C49700918A45 /* Base */,
+			);
+			name = Main.storyboard;
+			path = SunshireDriverContract;
+			sourceTree = "<group>";
+		};
+		C300FCF81EC3C49700918A45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C300FCF91EC3C49700918A45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C300FCFC1EC3C49700918A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C300FCFD1EC3C49700918A45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C300FCFF1EC3C49700918A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02CB01E62E467D17E191343 /* Pods-SunshireDriverContract.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SunshireDriverContract/SunshireDriverContract.entitlements;
+				DEVELOPMENT_TEAM = G4B7VYAHND;
+				INFOPLIST_FILE = SunshireDriverContract/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SunshireShuttle.SunshireDriverContract;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C300FD001EC3C49700918A45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE97CEFA2DAEC9C74A132B16 /* Pods-SunshireDriverContract.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SunshireDriverContract/SunshireDriverContract.entitlements;
+				DEVELOPMENT_TEAM = G4B7VYAHND;
+				INFOPLIST_FILE = SunshireDriverContract/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SunshireShuttle.SunshireDriverContract;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C300FCDF1EC3C49700918A45 /* Build configuration list for PBXProject "SunshireDriverContract" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C300FCFC1EC3C49700918A45 /* Debug */,
+				C300FCFD1EC3C49700918A45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C300FCFE1EC3C49700918A45 /* Build configuration list for PBXNativeTarget "SunshireDriverContract" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C300FCFF1EC3C49700918A45 /* Debug */,
+				C300FD001EC3C49700918A45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C300FCF31EC3C49700918A45 /* SunshireDriverContract.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C300FCF41EC3C49700918A45 /* SunshireDriverContract.xcdatamodel */,
+			);
+			currentVersion = C300FCF41EC3C49700918A45 /* SunshireDriverContract.xcdatamodel */;
+			path = SunshireDriverContract.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C300FCDC1EC3C49700918A45 /* Project object */;
+}

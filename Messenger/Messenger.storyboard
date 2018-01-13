@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GSJ-Ua-qek">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sunshire Messenger View Controller-->
+        <scene sceneID="Gi8-gm-A2f">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="GSJ-Ua-qek" customClass="SunshireMessengerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WXo-1S-5Sn"/>
+                        <viewControllerLayoutGuide type="bottom" id="REC-aD-oOG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4fE-MS-Wik">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lz0-fe-a6b">
+                                <rect key="frame" x="0.0" y="20" width="375" height="601"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dispatchCell" rowHeight="135" id="T8F-Cn-hIR" customClass="SunshireMessengerDispatchCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T8F-Cn-hIR" id="iQM-UN-mXS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-QT-669">
+                                                    <rect key="frame" x="292" y="8" width="75" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7H-F3-lyl">
+                                                    <rect key="frame" x="59" y="87" width="303" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="driver + dispatch" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3JA-9d-QwB">
+                                                    <rect key="frame" x="59" y="8" width="225" height="67"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="CXL-QT-669" id="DGZ-pv-RKe"/>
+                                            <outlet property="dateLabel" destination="V7H-F3-lyl" id="4aX-wi-wts"/>
+                                            <outlet property="messageTextView" destination="3JA-9d-QwB" id="cKQ-gL-zbC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customerCell" id="Nag-dY-dzY" customClass="SunshireMessengerCustomerCellTableViewCell">
+                                        <rect key="frame" x="0.0" y="163" width="375" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nag-dY-dzY" id="VkP-cR-oAv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gyl-iP-PlL">
+                                                    <rect key="frame" x="16" y="8" width="75" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="customer + passenger" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cVF-Ed-pRk">
+                                                    <rect key="frame" x="99" y="8" width="195" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnx-VI-IDj">
+                                                    <rect key="frame" x="16" y="86" width="278" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="Gyl-iP-PlL" id="pzj-bs-UCp"/>
+                                            <outlet property="dateLabel" destination="fnx-VI-IDj" id="y2e-0t-Hji"/>
+                                            <outlet property="messageTextView" destination="cVF-Ed-pRk" id="Caa-0i-E56"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GSJ-Ua-qek" id="XP0-Xk-dda"/>
+                                    <outlet property="delegate" destination="GSJ-Ua-qek" id="B6X-Ny-VVu"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-f2-2lZ">
+                                <rect key="frame" x="137" y="629" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fKR-ct-Wv1"/>
+                                    <constraint firstAttribute="width" constant="101" id="ldu-10-bKD"/>
+                                </constraints>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="didClickSend:" destination="GSJ-Ua-qek" eventType="touchUpInside" id="OlX-wn-QGZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lz0-fe-a6b" firstAttribute="leading" secondItem="4fE-MS-Wik" secondAttribute="leading" id="AEZ-RJ-vAY"/>
+                            <constraint firstAttribute="trailing" secondItem="lz0-fe-a6b" secondAttribute="trailing" id="MeL-dX-jKl"/>
+                            <constraint firstItem="lz0-fe-a6b" firstAttribute="top" secondItem="WXo-1S-5Sn" secondAttribute="bottom" id="kCg-iM-fkR"/>
+                            <constraint firstItem="aPg-f2-2lZ" firstAttribute="top" secondItem="lz0-fe-a6b" secondAttribute="bottom" constant="8" id="wlc-UT-1Mi"/>
+                            <constraint firstItem="aPg-f2-2lZ" firstAttribute="centerX" secondItem="4fE-MS-Wik" secondAttribute="centerX" id="yrP-ct-u4E"/>
+                            <constraint firstItem="REC-aD-oOG" firstAttribute="top" secondItem="aPg-f2-2lZ" secondAttribute="bottom" constant="8" id="zvJ-Uh-1tE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messengerTableView" destination="lz0-fe-a6b" id="d8w-KX-EYw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0X-fw-566" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="86.806596701649184"/>
+        </scene>
+    </scenes>
+</document>

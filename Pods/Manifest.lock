@@ -1,0 +1,21 @@
+PODS:
+  - FSCalendar (2.7.7)
+
+DEPENDENCIES:
+  - FSCalendar (from `https://github.com/WenchaoD/FSCalendar.git`)
+
+EXTERNAL SOURCES:
+  FSCalendar:
+    :git: https://github.com/WenchaoD/FSCalendar.git
+
+CHECKOUT OPTIONS:
+  FSCalendar:
+    :commit: 2cb596e838318b43aed72133a380fe16d002010a
+    :git: https://github.com/WenchaoD/FSCalendar.git
+
+SPEC CHECKSUMS:
+  FSCalendar: 8bda3534e8590b87124af9a236887314e0359a27
+
+PODFILE CHECKSUM: 10d04537f1e2ef1afe1be5c22b45fe6012046694
+
+COCOAPODS: 1.2.0
