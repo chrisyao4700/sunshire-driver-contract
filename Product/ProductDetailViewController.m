@@ -15,6 +15,7 @@
 #import "CurrentUserManager.h"
 #import "SunshireMessengerViewController.h"
 #import "TripTextRootViewController.h"
+#import "AppCoreDataSocket.h"
 @interface ProductDetailViewController ()
 
 @end
@@ -25,8 +26,6 @@
     UIAlertController * alert;
     
     SunshireContractConnector * connector;
-    
-    
     UIActivityIndicatorView * loadingView;
     UIBarButtonItem * rightItem;
     
@@ -34,12 +33,14 @@
     NSNumber * is_sharing;
     
     SS_CONTRACT_USER * driver_info;
-
+    
     NSString * alert_phone;
     
     NSInteger from_count;
     NSInteger to_count;
     
+    
+    SS_TRIP * core_trip;
     
     
 }
@@ -51,7 +52,6 @@
     [self setNavigationBarString:@"TRIP"];
     from_count = 0;
     to_count = 0;
-    
     // Do any additional setup after loading the view.
 }
 -(void) configRightItem{
@@ -71,11 +71,14 @@
     token = [ProductTokenHandler getProductTokenWithID:self.product_id];
     [self reloadActionView];
     [self requestTripInfo];
+    core_trip = [AppCoreDataSocket getTripWithID:self.product_id];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self requestDriverSharingStatusWithTag:3];
-    
+    if (core_trip) {
+        [self reloadTripInfoView];
+    }
 }
 
 
@@ -91,7 +94,7 @@
                                 @"query": query
                                 };
         [connector sendNormalRequestWithPack:dict andServiceCode:@"special_solo" andCustomerTag:1];
-    
+        
     });
 }
 -(void) requestAlertPhoneNumber{
@@ -179,8 +182,19 @@
     }else{
         //NO TRIP YET
         temp = 0;
+        if (core_trip) {
+            if (section == 0) {
+                temp = 1;
+            }
+            if (section == 1) {
+                temp = 2;
+            }
+            if (section == 2) {
+                temp = 1;
+            }
+        }
     }
-
+    
     
     return temp;
 }
@@ -195,7 +209,7 @@
         
     }
     if (section == 2) {
-       
+        
     }
     
     return temp;
@@ -229,8 +243,8 @@
         cell.detailTextLabel.textColor = [UIColor whiteColor];
         if (indexPath.row == 0) {
             // TRIP ID # + SERVICE TYPE
-            cell.textLabel.text = [NSString stringWithFormat:@"单号# %@",[trip_dict objectForKey:@"id"]];
-            cell.detailTextLabel.text = [trip_dict objectForKey:@"service_type"];
+            cell.textLabel.text = [NSString stringWithFormat:@"单号# %@",[trip_dict objectForKey:@"id"]?[trip_dict objectForKey:@"id"]: core_trip.trip_id];
+            cell.detailTextLabel.text = [trip_dict objectForKey:@"service_type"]?[trip_dict objectForKey:@"service_type"] : core_trip.service_type;
         }
         if (indexPath.row == 1) {
             //PASSENGER + LUGGAGE
@@ -253,7 +267,7 @@
             
             c_cell.content_title_label.text = @"出发地: ";
             c_cell.content_title_label.textColor = [UIColor whiteColor];
-            c_cell.content_text_view.text = [trip_dict objectForKey:@"location_from"];
+            c_cell.content_text_view.text = [trip_dict objectForKey:@"location_from"] ? [trip_dict objectForKey:@"location_from"] : core_trip.location_from;
             c_cell.content_text_view.editable = NO;
             
             c_cell.content_text_view.textColor = [UIColor whiteColor];
@@ -267,7 +281,7 @@
             cell.detailTextLabel.textColor = [UIColor whiteColor];
             
             cell.textLabel.text = @"接客时间:";
-            cell.detailTextLabel.text = [CYFunctionSet convertDateToShortStr:[CYFunctionSet convertStringToDate:[trip_dict objectForKey:@"pickup_time"]]];
+            cell.detailTextLabel.text = [CYFunctionSet convertDateToShortStr:[CYFunctionSet convertStringToDate:[trip_dict objectForKey:@"pickup_time"]]]? [CYFunctionSet convertDateToShortStr:[CYFunctionSet convertStringToDate:[trip_dict objectForKey:@"pickup_time"]]]:[CYFunctionSet convertDateToShortStr:[CYFunctionSet convertStringToDate:core_trip.pickup_time]];
         }
     }
     if(indexPath.section == 2){
@@ -278,7 +292,7 @@
             
             c_cell.content_title_label.text = @"目的地: ";
             c_cell.content_title_label.textColor = [UIColor whiteColor];
-            c_cell.content_text_view.text = [trip_dict objectForKey:@"location_to"];
+            c_cell.content_text_view.text = [trip_dict objectForKey:@"location_to"] ? [trip_dict objectForKey:@"location_to"] : core_trip.location_to;
             c_cell.content_text_view.editable = NO;
             
             c_cell.content_text_view.textColor = [UIColor whiteColor];
@@ -311,7 +325,7 @@
             c_cell.content_text_view.textColor = [UIColor redColor];
             c_cell.content_text_view.backgroundColor = [UIColor clearColor];
             return c_cell;
-
+            
         }
     }
     return cell;
@@ -320,7 +334,7 @@
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             //NAV TO PICKUP
-            [CYFunctionSet callGoogleMapWithDestination:[trip_dict objectForKey:@"location_from"] forCompletionHandler:^(BOOL success){
+            [CYFunctionSet callGoogleMapWithDestination:[trip_dict objectForKey:@"location_from"]?[trip_dict objectForKey:@"location_from"]:core_trip.location_from forCompletionHandler:^(BOOL success){
                 if (success) {
                     [self reloadTripInfoView];
                 }
@@ -337,14 +351,14 @@
             //NAV TO DROP-OFF
             if (to_count < 1) {
                 if (token.is_sent_eta == YES) {
-                    [CYFunctionSet callGoogleMapWithDestination:[trip_dict objectForKey:@"location_to"] forCompletionHandler:^(BOOL success){
+                    [CYFunctionSet callGoogleMapWithDestination:[trip_dict objectForKey:@"location_to"]?[trip_dict objectForKey:@"location_to"]:core_trip.location_to forCompletionHandler:^(BOOL success){
                         if (success) {
                             [self reloadTripInfoView];
                         }
                     }
                                                  forFailHandler:^{
                                                      [self showAlertWithTittle:@"错误❌" forMessage:@"无法打开谷歌地图"];
-                                                 
+                                                     
                                                  }];
                 }else{
                     [self confirmActionForTitle:@"COB WARNING" forMessage:@"您还未发送【上客】, 现在发送?" forConfirmationHandler:^(UIAlertAction * action){
@@ -354,7 +368,7 @@
                 }
                 to_count ++;
             }else{
-                [CYFunctionSet callGoogleMapWithDestination:[trip_dict objectForKey:@"location_to"] forCompletionHandler:^(BOOL success){
+                [CYFunctionSet callGoogleMapWithDestination:[trip_dict objectForKey:@"location_to"]?[trip_dict objectForKey:@"location_to"]:core_trip.location_to forCompletionHandler:^(BOOL success){
                     if (success) {
                         [self reloadTripInfoView];
                     }
@@ -363,7 +377,7 @@
                                                  [self showAlertWithTittle:@"错误❌" forMessage:@"无法打开谷歌地图"];
                                                  
                                              }];
-
+                
             }
         }
     }
@@ -422,7 +436,7 @@
             }
             
         }
-
+        
         if (indexPath.item == 2) {
             if (token.is_sent_cob ==YES) {
                 cell.action_title_label.text = @"【上客】\n已发";
@@ -444,7 +458,7 @@
                 cell.backgroundColor = [UIColor purpleColor];
             }
         }
-
+        
     }
     if (indexPath.section == 1) {
         if (indexPath.item == 0) {
@@ -529,7 +543,7 @@
                 [self performCollectETATime];
                 //perform send ETA
             }
-
+            
         }
     }
     if ([key isEqualToString:@"ARRIVAL"]) {
@@ -540,9 +554,9 @@
         }else{
             
             [self confirmActionForTitle:@"确定吗？" forMessage:@"向客户发送【到达】并通知调度?" forConfirmationHandler:^(UIAlertAction * action){
-                            //perform send ARRIVAL
+                //perform send ARRIVAL
                 [self requestActionForTag:22 forAdditionalInfo:nil];
-                        }];
+            }];
         }
         
         
@@ -558,7 +572,7 @@
                 //perform send COB
                 [self requestActionForTag:23 forAdditionalInfo:nil];
             }];
-
+            
         }
         
         
@@ -567,7 +581,7 @@
     if ([key isEqualToString:@"CAD"]) {
         if ([self checkreceivable] == YES) {
             [self confirmActionForTitle:@"注意⚠️" forMessage:[NSString stringWithFormat:@"请注意收取 $ %@ 现金!",[trip_dict objectForKey:@"receivable"]] forConfirmationHandler:^(UIAlertAction *action){
-            
+                
                 [self confirmActionForTitle:@"确定吗?" forMessage:@"向调度发送【下客】并结束行程?" forConfirmationHandler:^(UIAlertAction * action){
                     [self requestActionForTag:24 forAdditionalInfo:nil];
                 }];
@@ -590,14 +604,14 @@
             }];
             
         }
-
+        
     }
     
 }
 
 -(void) confirmActionForTitle:(NSString *) title
-                 forMessage:(NSString *) message
-     forConfirmationHandler: (void (^)(UIAlertAction * action)) handler {
+                   forMessage:(NSString *) message
+       forConfirmationHandler: (void (^)(UIAlertAction * action)) handler {
     
     dispatch_async(dispatch_get_main_queue(), ^{
         // code here
@@ -616,7 +630,7 @@
 }
 -(void) updateProductTokenWithKey:(NSString *) key{
     if ([key isEqualToString:@"ETA"]) {
-
+        
         token.is_sent_eta = YES;
         [ProductTokenHandler saveChanges];
         [self reloadActionView];
@@ -626,14 +640,14 @@
         token.is_sent_arrival = YES;
         [ProductTokenHandler saveChanges];
         [self reloadActionView];
-
+        
         
     }
     if ([key isEqualToString:@"COB"]) {
         token.is_sent_cob = YES;
         [ProductTokenHandler saveChanges];
         [self reloadActionView];
-
+        
         
     }
     if ([key isEqualToString:@"CAD"]) {
@@ -643,10 +657,10 @@
             //[self.navigationController popViewControllerAnimated:YES];
             [self performSegueWithIdentifier:@"toLocation" sender:self];
         }];
-    
+        
     }
     
-
+    
 }
 
 -(void) reloadActionView{
@@ -667,7 +681,7 @@
     if (tag == 21) {
         //SEND ETA
         dispatch_async(dispatch_get_main_queue(), ^{
-        
+            
             NSDictionary * dict = @{
                                     @"product_id":self.product_id,
                                     @"type":@"ETA",
@@ -687,7 +701,7 @@
                                     };
             [connector sendNormalRequestWithPack:dict andServiceCode:@"product_service" andCustomerTag:tag];
         });
-
+        
     }
     if (tag == 23) {
         //SEND COB
@@ -699,7 +713,7 @@
                                     };
             [connector sendNormalRequestWithPack:dict andServiceCode:@"product_service" andCustomerTag:tag];
         });
-
+        
     }
     if (tag == 24) {
         //SEND CAD
@@ -711,7 +725,7 @@
                                     };
             [connector sendNormalRequestWithPack:dict andServiceCode:@"product_service" andCustomerTag:tag];
         });
-
+        
     }
     if(tag == 25){
         //SEND LINK
@@ -873,7 +887,7 @@
                                                                                                                   }];
                                                              }
                                                              
-                                                                                                                      }];
+                                                         }];
         
         [alert addAction:okAction];
         [alert addAction:cancelAction];
@@ -882,7 +896,7 @@
         }];
         [self presentViewController:alert animated:YES completion:nil];
     });
-
+    
 }
 -(BOOL) checkStringIsValidNumber:(NSString * )value{
     BOOL flag = NO;
@@ -915,7 +929,7 @@
 }
 -(void) performCallWithNumber:(NSString *) num{
     dispatch_async(dispatch_get_main_queue(), ^{
-    
+        
         NSURL *pn = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", num]];
         [[UIApplication sharedApplication] openURL:pn options:@{} completionHandler:^(BOOL success){
             [self reloadActionView];

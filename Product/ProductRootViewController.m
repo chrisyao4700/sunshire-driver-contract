@@ -14,6 +14,7 @@
 #import "ProductDetailViewController.h"
 #import "NoLoadRootTableViewCell.h"
 #import "NoloadDetailViewController.h"
+#import "AppCoreDataSocket.h"
 @interface ProductRootViewController ()
 
 @end
@@ -40,9 +41,6 @@
     [super viewDidLoad];
     [self configLoadingView];
     [self configRightItem];
-    
-    
-    
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -86,7 +84,6 @@
 }
 -(void) requestNoloadList{
     dispatch_async(dispatch_get_main_queue(), ^{
-    
         if(!connector){
             connector = [[SunshireContractConnector alloc] initWithDelegate:self];
         }
@@ -94,16 +91,12 @@
             current_user = [CurrentUserManager getCurrentContractUser];
         }
         noload_list = nil;
-
-        
         NSString * query = [NSString stringWithFormat:@"SELECT `noload_info`.*, `noload_info_status`.`info_status` AS `status_str` FROM `noload_info` LEFT JOIN `noload_info_status` ON `noload_info_status`.`id` = `noload_info`.`status` WHERE `noload_info`.`driver_id` = '%@' AND `noload_info`.`status` != 0 AND `noload_info`.`trip_date` > '%@'", current_user.data_id , [CYFunctionSet convertDateToFormatString:[NSDate date]]];
         
         NSDictionary * dict = @{
                                 @"query" : query
                                 };
         [connector sendNormalRequestWithPack:dict andServiceCode:@"special_array" andCustomerTag:2];
-    
-    
     });
 }
 
@@ -118,18 +111,17 @@
 }
 -(void) dataSocketErrorWithTag:(NSInteger)tag andMessage: (NSString *) message
                 andCustomerTag:(NSInteger) c_tag{
-
     if (![message isEqualToString:@"NO RESULT FOUND"]) {
         [self showAlertWithTittle:@"错误❌" forMessage:message];
     }else{
         [self reloadContetView];
     }
-    
 }
 
 -(void)datasocketDidReceiveNormalResponseWithDict:(NSDictionary *)resultDic andCustomerTag:(NSInteger)c_tag{
     if (c_tag == 1) {
         product_list = [resultDic objectForKey:@"records"];
+        [AppCoreDataSocket saveTripListToCoreData:product_list];
         [self reloadContetView];
     }
     if (c_tag == 2) {
@@ -140,8 +132,6 @@
 
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-
-   
     NSInteger temp;
     
     temp = 3;
@@ -263,7 +253,6 @@
         UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction * action) {
                                                              // Handle further action
-                                                             
                                                          }];
         [alert addAction:okAction];
         [self presentViewController:alert animated:YES completion:nil];

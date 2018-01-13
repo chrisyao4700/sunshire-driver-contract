@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="APP_INFO" representedClassName="APP_INFO" syncable="YES" codeGenerationType="class">
         <attribute name="device_token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="udid" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,10 +27,19 @@
         <attribute name="salary_percentage" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SS_TRIP" representedClassName="SS_TRIP" syncable="YES" codeGenerationType="class">
+        <attribute name="location_from" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location_to" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pickup_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="service_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status_str" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trip_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="APP_INFO" positionX="-54" positionY="54" width="128" height="75"/>
         <element name="CURRENT_LOCATION" positionX="-54" positionY="45" width="128" height="105"/>
-        <element name="SS_CONTRACT_USER" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="PRODUCT_TOKEN" positionX="-54" positionY="45" width="128" height="120"/>
+        <element name="SS_CONTRACT_USER" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="SS_TRIP" positionX="-54" positionY="54" width="128" height="135"/>
     </elements>
 </model>

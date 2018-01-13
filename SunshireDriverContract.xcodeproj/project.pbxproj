@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		16AB34E9AA5071DAFE3855EA /* Pods_SunshireDriverContract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093C8AD3BD746671B54214E /* Pods_SunshireDriverContract.framework */; };
+		1EFAE48E200A7F6B008B6318 /* AppCoreDataSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAE48D200A7F6B008B6318 /* AppCoreDataSocket.m */; };
 		C300FCE91EC3C49700918A45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FCE81EC3C49700918A45 /* main.m */; };
 		C300FCEC1EC3C49700918A45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C300FCEB1EC3C49700918A45 /* AppDelegate.m */; };
 		C300FCF21EC3C49700918A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C300FCF01EC3C49700918A45 /* Main.storyboard */; };
@@ -68,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		0093C8AD3BD746671B54214E /* Pods_SunshireDriverContract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunshireDriverContract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFAE48C200A7F6B008B6318 /* AppCoreDataSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCoreDataSocket.h; sourceTree = "<group>"; };
+		1EFAE48D200A7F6B008B6318 /* AppCoreDataSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCoreDataSocket.m; sourceTree = "<group>"; };
 		BE97CEFA2DAEC9C74A132B16 /* Pods-SunshireDriverContract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunshireDriverContract.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunshireDriverContract/Pods-SunshireDriverContract.release.xcconfig"; sourceTree = "<group>"; };
 		C300FCE41EC3C49700918A45 /* SunshireDriverContract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunshireDriverContract.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C300FCE81EC3C49700918A45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -188,6 +191,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EFAE48B200A7EE7008B6318 /* LocalTripData */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAE48C200A7F6B008B6318 /* AppCoreDataSocket.h */,
+				1EFAE48D200A7F6B008B6318 /* AppCoreDataSocket.m */,
+			);
+			path = LocalTripData;
+			sourceTree = "<group>";
+		};
 		215AE267DD9EAEC09DEDD548 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +212,7 @@
 		C300FCDB1EC3C49700918A45 = {
 			isa = PBXGroup;
 			children = (
+				1EFAE48B200A7EE7008B6318 /* LocalTripData */,
 				C32C48CA1EF5C36500B90717 /* Messenger */,
 				C38D2BE61EDF681A00E3525C /* Product Token */,
 				C38D2BDA1EDDFBC700E3525C /* Product */,
@@ -652,6 +665,7 @@
 				C32C48DE1EF5C6C900B90717 /* TextEditorViewController.m in Sources */,
 				C300FCE91EC3C49700918A45 /* main.m in Sources */,
 				C300FD0D1EC62CC000918A45 /* SunshireContractConnector.m in Sources */,
+				1EFAE48E200A7F6B008B6318 /* AppCoreDataSocket.m in Sources */,
 				C38D2BD41EDA55FC00E3525C /* CYPolyline.m in Sources */,
 				C37A0C451EE6125800FFCD2C /* NoLoadRootTableViewCell.m in Sources */,
 				C38D2BC41EDA121F00E3525C /* DataPickerViewController.m in Sources */,
